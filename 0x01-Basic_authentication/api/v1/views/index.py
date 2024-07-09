@@ -31,3 +31,9 @@ def unauthorized_err():
     """ Aborts and returns an unauthorized
     access error"""
     abort(401)
+
+@app_views.route('/api/v1/forbidden', methods=['GET'], strict_slashes=False)
+def forbidden_err():
+    """ Aborts and returns a forbidden
+    access error"""
+    abort(403)
